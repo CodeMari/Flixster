@@ -31,7 +31,7 @@ public class Movie {
     }
 
     public String getPostPath() {
-       return String.format("https://image.tmdb.org/t/p/w342/6bCplVkhowCjTHXWv49UjRPn0eK.jpg",postPath);
+       return String.format("https://image.tmdb.org/t/p/w342/%s",postPath);
         // return postPath;
     }
 
