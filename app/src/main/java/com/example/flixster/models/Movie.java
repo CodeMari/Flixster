@@ -9,12 +9,14 @@ import java.util.List;
 
 public class Movie {
 
+    String backdropPath;
     String postPath;
     String title;
     String overview;
 
     public Movie(JSONObject jsonObject) throws JSONException {
         //gets the items from the API, using the exact key from the api
+        backdropPath = jsonObject.getString("backdrop_path");
         postPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("title");
         overview = jsonObject.getString("overview");
@@ -34,6 +36,8 @@ public class Movie {
        return String.format("https://image.tmdb.org/t/p/w342/%s",postPath);
         // return postPath;
     }
+
+    public String getBackdropPath(){ return  String.format("https://image.tmdb.org/t/p/w342/%s",backdropPath); }
 
     public String getTitle() {
         return title;
